@@ -6,6 +6,9 @@
 #include <unistd.h>
 #include <linux/joystick.h>
 
+/*
+
+*/
 int read_event(int fd, struct js_event *event)
 {
     ssize_t bytes;
