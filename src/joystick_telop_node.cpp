@@ -6,6 +6,11 @@
 #include <unistd.h>
 #include <linux/joystick.h>
 
+
+struct axis_state
+{
+    short x, y;
+};
 /*
 
 */
@@ -21,10 +26,9 @@ int read_event(int fd, struct js_event *event)
 
     return -1;
 }   
-struct axis_state
-{
-    short x, y;
-};
+
+
+
 size_t get_axis_state(struct js_event *event, struct axis_state axes[3])
 {
     size_t axis = event->number / 2;
