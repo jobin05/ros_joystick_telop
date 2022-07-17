@@ -17,7 +17,7 @@ int read_event(int fd, struct js_event *event)
     }
 
     return -1;
-}
+}   
 struct axis_state
 {
     short x, y;
